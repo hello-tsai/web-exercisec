@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            --bg:white;
+            --col:black;
+        }
+        div{
+            width:100px;
+            height:100px;
+        }
+        .red{
+            color: white;
+            background:red;
+        }
+        .blue{
+            color: gold;
+            background:blue;
+        }
+        .yellow{
+            color: green;
+            background:yellow;
+        }
+        .view{
+            width:200px;
+            height:200px;
+            border:2px solid black;
+            text-align:center;
+            line-height:200px;
+            background-color: var(--bg);
+            color: var(--col);
+        }
+    </style>
+</head>
+<body>
+<div class="red" onclick = "click"></div>
+<div class="blue"></div>
+<div class="yellow"></div>
+<div class="view">
+    给你
+</div>
+<script>
+    let red =  document.querySelector(".red");
+    let view  = document.querySelector(".view");
+    let blue = document.querySelector(".blue");
+    let yellow = document.querySelector(".yellow");
+    red.addEventListener("click",()=>{
+        document.body.style.setProperty('--bg', 'red');
+        document.body.style.setProperty('--col', 'white');
+    })
+    blue.addEventListener("click",()=>{
+        document.body.style.setProperty('--bg', 'blue');
+        document.body.style.setProperty('--col', 'white');
+
+    })
+    yellow.addEventListener("click",()=>{
+        document.body.style.setProperty('--bg', 'yellow');
+        document.body.style.setProperty('--col', 'white');
+
+    })
+
+</script>
+</body>
+</html>
